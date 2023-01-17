@@ -1,0 +1,642 @@
+@import Url("Https://Fonts.Googleapis.Com/Css2?Family=Poppins:ital,Wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&Display=Swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: Border-Box;
+  padding: 0;
+  margin: 0;
+}
+
+.Html {
+  font-size: 62.5%;
+}
+
+Body {
+  font-family: "Poppins", Sans-Serif;
+}
+
+/* ///////////..Utility Classes../////////// */
+
+.Container {
+  max-width: 1200px;
+  width: 90%;
+  margin: Auto;
+}
+
+.Btn {
+  display: Inline-Block;
+  padding: 0.5em 1.5em;
+  text-decoration: None;
+  border-radius: 50px;
+  cursor: Pointer;
+  outline: None;
+  margin-top: 1em;
+  text-transform: Uppercase;
+  font-weight: Small;
+}
+
+.Btn-Primary {
+  color: #fff;
+  background: #16a083;
+}
+
+.Btn-Primary:hover {
+  background: #117964;
+  transition: Background 0.3s Ease-In-Out;
+}
+
+/* ............/Navbar/............ *
+
+/* Desktop Mode............/// */
+
+.Navbar Input[Type="Checkbox"],
+.Navbar .Hamburger-Lines {
+  display: None;
+}
+
+.Navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: Fixed;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.85;
+  height: 50px;
+  z-index: 12;
+}
+
+.Navbar-Container {
+  display: Flex;
+  justify-content: Space-Between;
+  height: 64px;
+  align-items: Center;
+}
+
+.Menu-Items {
+  order: 2;
+  display: Flex;
+}
+
+.Menu-Items Li {
+  list-style: None;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.Menu-Items A {
+  text-decoration: None;
+  color: #444;
+  font-weight: 500;
+  transition: Color 0.3s Ease-In-Out;
+}
+
+.Menu-Items A:hover {
+  color: #117964;
+  transition: Color 0.3s Ease-In-Out;
+}
+
+.Logo {
+  order: 1;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ............//// Showcase Styling ////......... */
+
+.Showcase-Area {
+  height: 50vh;
+  background: Linear-Gradient(
+      Rgba(240, 240, 240, 0.144),
+      Rgba(255, 255, 255, 0.336)
+    ),
+    Url("Https://I.Postimg.Cc/WT3TQS3V/Header-Image2.Jpg");
+  background-size: Cover;
+  background-position: Center;
+  background-repeat: No-Repeat;
+}
+
+.Showcase-Container {
+  display: Flex;
+  flex-direction: Column;
+  align-items: Center;
+  justify-content: Center;
+  height: 100%;
+  font-size: 1.6rem;
+}
+
+.Main-Title {
+  text-transform: Uppercase;
+  margin-top: 1.5em;
+}
+
+/* ......//About Us//...... */
+
+#About {
+  padding: 50px 0;
+  background: #f5f5f7;
+}
+
+.About-Wrapper {
+  display: Flex;
+  flex-wrap: Wrap;
+}
+
+#About H2 {
+  font-size: 2.3rem;
+}
+
+#About P {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#About .Small {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.About-Img {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: TranslateX(150%);
+  animation: About-Img-Animation 1s Ease-In-Out Forwards;
+}
+
+@keyframes About-Img-Animation {
+  100% {
+    transform: Translate(0);
+  }
+}
+
+.About-Text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: Auto;
+  transform: Translate(-150%);
+  animation: About-Text-Animation 1s Ease-In-Out Forwards;
+}
+
+@keyframes About-Text-Animation {
+  100% {
+    transform: Translate(0);
+  }
+}
+
+.About-Img Img {
+  display: Block;
+  height: 400px;
+  max-width: 100%;
+  margin: Auto;
+  object-fit: Cover;
+  object-position: Right;
+}
+
+/* ..........////Food Category///........... */
+
+#Food {
+  padding: 5rem 0 10rem 0;
+}
+
+#Food H2 {
+  text-align: Center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: Uppercase;
+  color: #555;
+}
+
+.Food-Container {
+  display: Flex;
+  justify-content: Space-Between;
+}
+
+.Food-Container Img {
+  display: Block;
+  width: 100%;
+  margin: Auto;
+  max-height: 300px;
+  object-fit: Cover;
+  object-position: Center;
+}
+
+.Img-Container {
+  margin: 0 1rem;
+  position: Relative;
+}
+
+.Img-Content {
+  position: Absolute;
+  top: 70%;
+  left: 50%;
+  transform: Translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  text-align: Center;
+  transition: All 0.3s Ease-In-Out 0.1s;
+}
+
+.Img-Content H3 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.Img-Content A {
+  font-size: 1.2rem;
+}
+
+.Img-Container::after {
+  content: "";
+  display: Block;
+  position: Absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: Rgba(0, 0, 0, 0.871);
+  opacity: 0;
+  z-index: 1;
+
+  transform: ScaleY(0);
+  transform-origin: 100% 100%;
+  transition: All 0.3s Ease-In-Out;
+}
+
+.Img-Container:hover::after {
+  opacity: 1;
+  transform: ScaleY(1);
+}
+
+.Img-Container:hover .Img-Content {
+  opacity: 1;
+  top: 40%;
+}
+
+/* .........../Food Menu/............ */
+
+.Food-Menu-Heading {
+  text-align: Center;
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.Food-Menu-Container {
+  display: Flex;
+  flex-wrap: Wrap;
+  padding: 50px 0px 30px 0px;
+}
+
+.Food-Menu-Container Img {
+  display: Block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: Cover;
+  object-position: Center;
+}
+
+.Food-Menu-Item {
+  display: Flex;
+  flex: 1 1 600px;
+  justify-content: Space-Evenly;
+  margin-bottom: 3rem;
+}
+
+.Food-Description {
+  margin: Auto 1.5rem;
+}
+
+.Font-Title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #444;
+}
+
+.Food-Description P {
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.Food-Description .Food-Price {
+  color: #117964;
+  font-weight: 700;
+}
+
+/* ........./ Testimonial /.......... */
+
+#Testimonials {
+  padding: 5rem 0;
+  background: Rgba(243, 243, 243);
+}
+
+.Testimonial-Title {
+  text-align: Center;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.Testimonial-Container {
+  display: Flex;
+  justify-content: Space-Between;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.Testimonial-Box .Checked {
+  color: #ff9529;
+}
+
+.Testimonial-Box .Testimonial-Text {
+  margin: 1rem 0;
+  color: #444;
+}
+
+.Testimonial-Box {
+  text-align: Center;
+  padding: 1rem;
+}
+
+.Customer-Photo Img {
+  display: Block;
+  width: 150px;
+  height: 150px;
+  object-fit: Cover;
+  object-position: Center;
+  border-radius: 50%;
+  margin: Auto;
+}
+
+/* ........ Contact Us........... */
+
+#Contact {
+  padding: 5rem 0;
+  background: Rgb(226, 226, 226);
+}
+
+.Contact-Container {
+  display: Flex;
+  background: #fff;
+}
+
+.Contact-Img {
+  width: 50%;
+}
+
+.Contact-Img Img {
+  display: Block;
+  height: 400px;
+  width: 100%;
+  object-position: Center;
+  object-fit: Cover;
+}
+
+.Form-Container {
+  padding: 1rem;
+  width: 50%;
+  margin: Auto;
+}
+
+.Form-Container Input {
+  display: Block;
+  width: 100%;
+  border: None;
+  border-bottom: 2px Solid #ddd;
+  padding: 1rem 0;
+  box-shadow: None;
+  outline: None;
+  margin-bottom: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.Form-Container Textarea {
+  display: Block;
+  width: 100%;
+  border: None;
+  border-bottom: 2px Solid #ddd;
+  color: #444;
+  outline: None;
+  padding: 1rem 0;
+  resize: None;
+}
+
+.Form-Container H2 {
+  font-size: 2.7rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 1rem;
+  margin-top: -1.2rem;
+}
+
+.Form-Container A {
+  font-size: 1.3rem;
+}
+
+#Footer H2 {
+  text-align: Center;
+  font-size: 1.8rem;
+  padding: 2.6rem;
+  font-weight: 500;
+  color: #fff;
+  background: Rgb(65, 65, 65);
+}
+
+/* ......../ Media Query /.......... */
+
+@media (max-width: 768px) {
+  .Navbar {
+    opacity: 0.95;
+  }
+
+  .Navbar-Container Input[Type="Checkbox"],
+  .Navbar-Container .Hamburger-Lines {
+    display: Block;
+  }
+
+  .Navbar-Container {
+    display: Block;
+    position: Relative;
+    height: 64px;
+  }
+
+  .Navbar-Container Input[Type="Checkbox"] {
+    position: Absolute;
+    display: Block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .Navbar-Container .Hamburger-Lines {
+    display: Block;
+    height: 23px;
+    width: 35px;
+    position: Absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: Flex;
+    flex-direction: Column;
+    justify-content: Space-Between;
+  }
+
+  .Navbar-Container .Hamburger-Lines .Line {
+    display: Block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+  .Navbar-Container .Hamburger-Lines .Line1 {
+    transform-origin: 0% 0%;
+    transition: Transform 0.4s Ease-In-Out;
+  }
+
+  .Navbar-Container .Hamburger-Lines .Line2 {
+    transition: Transform 0.2s Ease-In-Out;
+  }
+
+  .Navbar-Container .Hamburger-Lines .Line3 {
+    transform-origin: 0% 100%;
+    transition: Transform 0.4s Ease-In-Out;
+  }
+
+  .Navbar .Menu-Items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: Translate(-150%);
+    display: Flex;
+    flex-direction: Column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: Transform 0.5s Ease-In-Out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+  }
+
+  .Navbar .Menu-Items Li {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .Logo {
+    position: Absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 2rem;
+  }
+
+  .Navbar-Container Input[Type="Checkbox"]:checked ~ .Menu-Items {
+    transform: TranslateX(0);
+  }
+
+  .Navbar-Container Input[Type="Checkbox"]:checked ~ .Hamburger-Lines .Line1 {
+    transform: Rotate(35deg);
+  }
+
+  .Navbar-Container Input[Type="Checkbox"]:checked ~ .Hamburger-Lines .Line2 {
+    transform: ScaleY(0);
+  }
+
+  .Navbar-Container Input[Type="Checkbox"]:checked ~ .Hamburger-Lines .Line3 {
+    transform: Rotate(-35deg);
+  }
+
+  /* ......./ Food /......... */
+
+  .Food-Container {
+    flex-direction: Column;
+    align-items: Stretch;
+  }
+
+  .Food-Type:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  .Food-Type {
+    box-shadow: 5px 5px 10px 0 #aaa;
+  }
+
+  .Img-Container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  Html {
+    font-size: 65%;
+  }
+
+  .Navbar .Menu-Items Li {
+    font-size: 1.6rem;
+  }
+
+  .Testimonial-Container {
+    flex-direction: Column;
+    text-align: Center;
+  }
+
+  .Food-Menu-Container Img {
+    margin: Auto;
+  }
+
+  .Food-Menu-Item {
+    flex-direction: Column;
+    text-align: Center;
+  }
+
+  .Form-Container {
+    width: 90%;
+  }
+
+  .Contact-Container {
+    display: Flex;
+    flex-direction: Column;
+  }
+
+  .Contact-Img {
+    width: 90%;
+    margin: 3rem Auto;
+  }
+
+  .Logo {
+    position: Absolute;
+    top: 06px;
+    right: 15px;
+    font-size: 3rem;
+  }
+
+  .Navbar .Menu-Items Li {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 769px) And (max-width: 1200px) {
+  .Img-Container H3 {
+    font-size: 1.5rem;
+  }
+
+  .Img-Container .Btn {
+    font-size: 0.7rem;
+  }
+}
+
+@media (orientation: Landscape) And (max-height: 500px) {
+  .Showcase-Area {
+    height: 50vmax;
+  }
+}
