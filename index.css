@@ -16,6 +16,12 @@ Body {
   font-family: "Poppins", Sans-Serif;
 }
 
+hr {
+  border: 0.2px solid rgba(255, 170, 0, 0.479);
+  width: 80vw;
+  margin: auto;
+}
+
 /* ///////////..Utility Classes../////////// */
 
 .Container {
@@ -28,7 +34,7 @@ Body {
   display: Inline-Block;
   padding: 0.5em 1.5em;
   text-decoration: None;
-  border-radius: 50px;
+  border-radius: 20px;
   cursor: Pointer;
   outline: None;
   margin-top: 1em;
@@ -38,7 +44,7 @@ Body {
 
 .Btn-Primary {
   color: #fff;
-  background: #16a083;
+  background: #1d9362;
 }
 
 .Btn-Primary:hover {
@@ -56,12 +62,15 @@ Body {
 }
 
 .Navbar {
-  box-shadow: 0px 5px 10px 0px #aaa;
   position: Fixed;
+  top: 0;
   width: 100%;
-  background: #fff;
-  color: #000;
-  opacity: 0.85;
+  background-color: Rgba(0, 0, 0, 0.4);
+  color: rgb(255, 255, 255);
+
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(20px);
+
   height: 50px;
   z-index: 12;
 }
@@ -87,13 +96,13 @@ Body {
 
 .Menu-Items A {
   text-decoration: None;
-  color: #444;
+  color: #eef;
   font-weight: 500;
   transition: Color 0.3s Ease-In-Out;
 }
 
 .Menu-Items A:hover {
-  color: #117964;
+  color: #04f7c6;
   transition: Color 0.3s Ease-In-Out;
 }
 
@@ -106,12 +115,10 @@ Body {
 /* ............//// Showcase Styling ////......... */
 
 .Showcase-Area {
-  height: 50vh;
-  background: Linear-Gradient(
-      Rgba(240, 240, 240, 0.144),
-      Rgba(255, 255, 255, 0.336)
-    ),
-    Url("Https://I.Postimg.Cc/WT3TQS3V/Header-Image2.Jpg");
+  height: 100vh;
+  margin-top: 50px;
+  background: Linear-Gradient(Rgba(0, 0, 0, 0.7), Rgba(0, 0, 0, 0.5)),
+    Url("https://images.unsplash.com/photo-1484156818044-c040038b0719?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
   background-size: Cover;
   background-position: Center;
   background-repeat: No-Repeat;
@@ -124,11 +131,13 @@ Body {
   justify-content: Center;
   height: 100%;
   font-size: 1.6rem;
+  color: #bba;
 }
 
 .Main-Title {
   text-transform: Uppercase;
   margin-top: 1.5em;
+  color: rgb(255, 246, 198);
 }
 
 /* ......//About Us//...... */
@@ -273,6 +282,12 @@ Body {
 .Img-Container:hover .Img-Content {
   opacity: 1;
   top: 40%;
+}
+
+.typeFood {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 50px;
 }
 
 /* .........../Food Menu/............ */
